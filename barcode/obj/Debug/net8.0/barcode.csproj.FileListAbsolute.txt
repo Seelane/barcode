@@ -18,3 +18,4 @@ C:\Users\ostap\source\repos\barcode\barcode\obj\Debug\net8.0\refint\barcode.dll
 C:\Users\ostap\source\repos\barcode\barcode\obj\Debug\net8.0\barcode.pdb
 C:\Users\ostap\source\repos\barcode\barcode\obj\Debug\net8.0\barcode.genruntimeconfig.cache
 C:\Users\ostap\source\repos\barcode\barcode\obj\Debug\net8.0\ref\barcode.dll
+C:\Users\ostap\source\repos\barcode\barcode\obj\Debug\net8.0\barcode.sourcelink.json

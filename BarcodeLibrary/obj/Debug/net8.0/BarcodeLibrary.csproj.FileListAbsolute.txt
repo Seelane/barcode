@@ -9,3 +9,4 @@ C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibra
 C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\refint\BarcodeLibrary.dll
 C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.pdb
 C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\ref\BarcodeLibrary.dll
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.sourcelink.json

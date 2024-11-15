@@ -13,3 +13,4 @@ C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.dll
 C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\refint\Showcase.dll
 C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.pdb
 C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\ref\Showcase.dll
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.sourcelink.json

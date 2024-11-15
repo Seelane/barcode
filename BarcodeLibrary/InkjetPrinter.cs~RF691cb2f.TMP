@@ -1,7 +1,7 @@
 ﻿namespace BarcodeLibrary
 {
     public class InkjetPrinter
-        : Product, IProduct
+        : Product
     {
         public double Price { get; set; }
 
@@ -18,9 +18,7 @@
         }
 
         public string Type => "Струйный принтер";
-        public string ToStringIP() 
-            => $"{base.ToStringBased()}IsColor: {IsColor} \nPrice: {Price} \nCount: {Count} \nBarcode:\n{Barcode_Lab2}";
-        public override string ToString()
-            => $"Type: {Type} \n{this.ToStringIP()}";
+        public override string ToString() 
+            => $"{base.ToString()}IsColor: {IsColor} \nPrice: {Price} \nCount: {Count} \nBarcode:\n{Barcode_Lab2}";
     }
 }
