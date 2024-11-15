@@ -1,0 +1,15 @@
+C:\Users\ostap\source\repos\barcode\Showcase\bin\Debug\net8.0\Showcase.deps.json
+C:\Users\ostap\source\repos\barcode\Showcase\bin\Debug\net8.0\Showcase.dll
+C:\Users\ostap\source\repos\barcode\Showcase\bin\Debug\net8.0\Showcase.pdb
+C:\Users\ostap\source\repos\barcode\Showcase\bin\Debug\net8.0\BarcodeLibrary.dll
+C:\Users\ostap\source\repos\barcode\Showcase\bin\Debug\net8.0\BarcodeLibrary.pdb
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.csproj.AssemblyReference.cache
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.AssemblyInfoInputs.cache
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.AssemblyInfo.cs
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.csproj.CoreCompileInputs.cache
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.csproj.Up2Date
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.dll
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\refint\Showcase.dll
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\Showcase.pdb
+C:\Users\ostap\source\repos\barcode\Showcase\obj\Debug\net8.0\ref\Showcase.dll

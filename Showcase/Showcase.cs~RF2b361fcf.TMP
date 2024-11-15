@@ -1,0 +1,173 @@
+﻿using BarcodeLibrary;
+using System;
+namespace Showcase_L2
+{
+    // витрина
+    public class Showcase
+    {
+        private int _id;
+        public int Id { get => _id; set { _id = value; } }
+
+        private Product[] _container;
+        public static implicit operator Showcase(int size) => new Showcase(size);
+        private Showcase(int size)
+        {
+            _container = new Product[size];
+        }
+
+        // индексатор
+        public Product this[int index]
+        {
+            get
+            {
+                if (index >= _container.Length) return null;
+                Product p = _container[index];
+                _container[index] = null;
+                return p;
+            }
+            set
+            {
+                if (index >= _container.Length) return;
+                _container[index] = value;
+                MakeIdForProductOnShowcase(_container[index]);
+            }
+        }
+
+        public void MakeIdForProductOnShowcase(Product product)
+        {
+            for (int i = 0; i < _container.Length; i++)
+                if (_container[i] != null)
+                    this[i].Barcode.Text = $"{_container[i].Id.ToString()} {Id} {i}";
+        }
+
+        // добавление
+        public void Push(Product product)
+        {
+            for (int i = 0; i < _container.Length; i++)
+            {
+                if (_container[i] == null)
+                {
+                    this[i] = product;
+                    return;
+                }
+            }
+        }
+
+        // добавление
+        // по сути замена, но не замена
+        public void Push(Product product, int index)
+        {
+            if (index >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
+            this[index] = product;
+        }
+
+        // удаление
+        public void Pop()
+        {
+            for (int i = _container.Length - 1; i >= 0; i--)
+            {
+                if (_container[i] != null)
+                {
+                    this[i] = null;
+                    return;
+                }
+            }
+        }
+
+        // удаление
+        public void Pop(int index)
+        {
+            if (index >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
+            this[index] = null;
+        }
+
+        // замена
+        // по сути Push с двумя параметрами
+        public void Replace(int indexFrom, int indexTo)
+        {
+            if (indexFrom >= _container.Length || indexTo >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
+            this[indexTo] = this[indexFrom];
+        }
+
+        // перестановка
+        public void Rearrage(int index1st, int index2nd)
+        {
+            if (index1st >= _container.Length || index2nd >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
+            Product temp = this[index1st];
+            this[index1st] = this[index2nd];
+            this[index2nd] = temp;
+        }
+
+        // поиск по id
+        public void SearchPositionById(int id)
+        {
+            bool found = false;
+            for (int i = 0; i < _container.Length; i++)
+            {
+                if (_container[i] != null && _container[i].Id == id)
+                {
+                    Console.WriteLine($"Товар с идентификатором {id} на позиции {i}");
+                    found = true;
+                }
+            }
+            if (!found) Console.WriteLine("Либо такого товара нет, либо ошибка в идентификаторе.");
+            return;
+        }
+
+        // поиск по имени
+        public void SearchPositionByName(string name)
+        {
+            bool found = false;
+            for (int i = 0; i < _container.Length; i++)
+            {
+                if (_container[i] != null && _container[i].Name == name)
+                {
+                    Console.WriteLine($"Товар '{name}' на позиции {i}");
+                    found = true;
+                }
+            }
+            if (!found) Console.WriteLine("Либо такого товара нет, либо ошибка в имени.");
+            return;
+        }
+
+
+        // сортировка по имени
+        public void OrderByName()
+        {
+            Array.Sort(_container, (p1, p2) =>
+            {
+                if (p1 == null) return 1;
+                if (p2 == null) return -1;
+                return p1.Name.CompareTo(p2.Name);
+            });
+        }
+
+        // сортировка по id
+        public void OrderById()
+        {
+            Array.Sort(_container, (p1, p2) =>
+            {
+                if (p1 == null) return 1;
+                if (p2 == null) return -1;
+                return p1.Id.CompareTo(p2.Id);
+            });
+        }
+
+        // вывод
+        public override string ToString()
+        {
+            int i = 0;
+            string result = "";
+            foreach (var item in _container)
+            {
+                if (item != null)
+                {
+                    result += $"Позиция {i}:\n{item.ToString()}\n";
+                }
+                else result += $"Позиция {i}:\nПусто\n";
+                ++i;
+            }
+            return result;
+        }
+    }
+}

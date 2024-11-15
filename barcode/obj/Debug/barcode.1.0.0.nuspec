@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>barcode</id>
+    <version>1.0.0</version>
+    <authors>barcode</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="BarcodeLibrary" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Showcase" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\ostap\source\repos\barcode\barcode\bin\Debug\net8.0\barcode.runtimeconfig.json" target="lib\net8.0\barcode.runtimeconfig.json" />
+    <file src="C:\Users\ostap\source\repos\barcode\barcode\bin\Debug\net8.0\barcode.dll" target="lib\net8.0\barcode.dll" />
+  </files>
+</package>

@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "BarcodeLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BarcodeLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BarcodeLibrary.dll": {}
+        }
+      },
+      "Showcase/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BarcodeLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Showcase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Showcase.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BarcodeLibrary/1.0.0": {
+      "type": "project",
+      "path": "../BarcodeLibrary/BarcodeLibrary.csproj",
+      "msbuildProject": "../BarcodeLibrary/BarcodeLibrary.csproj"
+    },
+    "Showcase/1.0.0": {
+      "type": "project",
+      "path": "../Showcase/Showcase.csproj",
+      "msbuildProject": "../Showcase/Showcase.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "BarcodeLibrary >= 1.0.0",
+      "Showcase >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ostap\\.nuget\\packages\\": {},
+    "X:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ostap\\source\\repos\\barcode\\barcode\\barcode.csproj",
+      "projectName": "barcode",
+      "projectPath": "C:\\Users\\ostap\\source\\repos\\barcode\\barcode\\barcode.csproj",
+      "packagesPath": "C:\\Users\\ostap\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ostap\\source\\repos\\barcode\\barcode\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "X:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\ostap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\BarcodeLibrary.csproj": {
+              "projectPath": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\BarcodeLibrary.csproj"
+            },
+            "C:\\Users\\ostap\\source\\repos\\barcode\\Showcase\\Showcase.csproj": {
+              "projectPath": "C:\\Users\\ostap\\source\\repos\\barcode\\Showcase\\Showcase.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

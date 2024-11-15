@@ -1,0 +1,44 @@
+﻿using System.Text;
+
+namespace BarcodeLibrary
+{
+    public class Barcode_Lab2
+    {
+        private string _full;
+        private string _text;
+        private string _barcode;
+
+
+        public Barcode_Lab2(string text)
+        {
+        _text = text;
+        _barcode = BarcodeUtilities.GenerateBarcode(text);
+
+            //var finalBarcode = new StringBuilder();
+            //string rawBarcode = outputBarcode.ToString();
+            //string borderPadding = "\n".PadLeft(rawBarcode.Length + 1, AllowedBars[0]);
+
+            //finalBarcode.Append(borderPadding);
+
+            //for (int i = 0; i < _BarcodeHeight; ++i)
+            //{
+            //    finalBarcode.Append(rawBarcode).Append('\n');
+            //}
+
+            //finalBarcode.Append(borderPadding);
+
+            //var barcodeLength = rawBarcode.Length;
+            //var firstLength = barcodeLength / 2;
+            //var halfInputLength = inputText.Length / 2;
+            //finalBarcode.Append("".PadLeft(firstLength - halfInputLength, ' '));
+            //finalBarcode.Append(inputText);
+            //finalBarcode.Append("".PadLeft(barcodeLength - firstLength - (inputText.Length - halfInputLength), ' '));
+
+            //return finalBarcode.ToString();
+
+            _full = $"{_text}\n{_barcode}";
+        }
+          
+///        public override string ToString() => Barcode;
+    }
+}

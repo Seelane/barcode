@@ -1,0 +1,75 @@
+﻿using System;
+using Showcase_L2;
+using BarcodeLibrary;
+using System.Security.Cryptography.X509Certificates;
+
+public static class Program
+{
+    static void Main(string[] args)
+    {
+
+        while (true)
+        {
+            Console.WriteLine("Какое задание желаете проверить?");
+            string input = Console.ReadLine();
+            if (input == "1")
+                TestLab1();
+            else if (input == "2")
+                TestLab2();
+            else 
+                Console.WriteLine("Try again.");
+            
+
+        }
+    }
+    static void TestLab2()
+    {
+        Console.WriteLine("".PadLeft(80, '='));
+        Showcase showcase = 5; // Способ создания витрины на 5 мест
+        var sample = new InkjetPrinter(1000, "ВОЙНА И МИРЪ I", "Л.Н. Толстой", true, 1863, 1000000);
+        var lab2Data = new List<Product> {
+                    new InkjetPrinter(3000, "ВОЙНА И МИРЪ III", "Л.Н. Толстой", false, 1867, 300000),
+                    new InkjetPrinter(2000, "ВОЙНА И МИРЪ II", "Л.Н. Толстой", false, 1865, 200000),
+                    new InkjetPrinter(4000, "ВОЙНА И МИРЪ IV", "Л.Н. Толстой", true, 1869, 400000)
+                };
+
+        foreach (var product in lab2Data)
+            showcase.Push(product);
+        showcase.Push(sample); // допускаемый способ закидывания товара на витрину в пустое место
+        showcase[4] = sample; //прямая отправка товара на нужную позицию витрины
+        Console.WriteLine(sample);
+        sample.Id++; // Можно изменять идентификатор, при этом на витрине товар утратит свой уникальный штрих код
+        Console.WriteLine(sample);
+        showcase.OrderByName(); // Обязательная сортировка, она же может чинить штрихкоды товаров,
+                                // т.к. фактически происходит изменение позиций товаров на витрине.
+        showcase.Id++;          // можно менять ID витрины
+        showcase.OrderById();
+        Console.WriteLine("".PadLeft(40, '='));
+        Console.WriteLine(showcase); // приведение к строке витрины
+        showcase.Replace(4, 1);
+        showcase.Push(sample, 1);
+
+        Console.WriteLine("".PadLeft(20, '='));
+        Console.WriteLine(showcase);
+
+        showcase.SearchPositionById(1001);
+        showcase.SearchPositionByName("ВОЙНА И МИРЬ III");
+    }
+
+    static void TestLab1()
+    {
+        Console.WriteLine("Input text you want convert to barcode:");
+        string inputText = Console.ReadLine();
+        Barcode_Lab2 barcode = new(inputText);
+
+        if (barcode != null)
+        {
+            Console.WriteLine("\nCreated barcode:\n");
+            Console.WriteLine(barcode);
+        }
+        else
+        {
+            Console.WriteLine("Error: your text is invalid.");
+        }
+    }
+}

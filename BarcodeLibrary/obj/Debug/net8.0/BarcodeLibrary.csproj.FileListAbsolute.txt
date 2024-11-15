@@ -1,0 +1,11 @@
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\bin\Debug\net8.0\BarcodeLibrary.deps.json
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\bin\Debug\net8.0\BarcodeLibrary.dll
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\bin\Debug\net8.0\BarcodeLibrary.pdb
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.AssemblyInfoInputs.cache
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.AssemblyInfo.cs
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.dll
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\refint\BarcodeLibrary.dll
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\BarcodeLibrary.pdb
+C:\Users\ostap\source\repos\barcode\BarcodeLibrary\obj\Debug\net8.0\ref\BarcodeLibrary.dll
