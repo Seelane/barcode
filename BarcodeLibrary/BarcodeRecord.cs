@@ -6,11 +6,14 @@ namespace BarcodeLibrary
     {
         private string _full;
         private string _text;
+        private string _formattedText;
         private string _barcode;
 
         public string Full => _full;
 
+        public string FormattedText => _formattedText;
 
+       
         public string Text
         {
             get => _text;
@@ -19,6 +22,7 @@ namespace BarcodeLibrary
                 if (_text == value) return;
                 _barcode = BarcodeUtilities.GenerateBarcode(value);
                 _text = value;
+                _formattedText = $"* {_text} *";
                 UpdateBarcode();
             }
         }
@@ -31,16 +35,16 @@ namespace BarcodeLibrary
 
             var barcodeLength = BarcodeString.ToString().Length / barcodeHeight;
             var firstLength = barcodeLength / 2;
-            var halfInputLength = Text.Length / 2;
+            var halfInputLength = FormattedText.Length / 2;
             finalText.Append("".PadLeft(firstLength - halfInputLength, ' '));
-            finalText.Append(Text);
-            finalText.Append("".PadLeft(barcodeLength - firstLength - (Text.Length - halfInputLength), ' '));
+            finalText.Append(FormattedText);
+            finalText.Append("".PadLeft(barcodeLength - firstLength - (FormattedText.Length - halfInputLength), ' '));
             _full = $"{BarcodeString}{finalText}";
         }
 
         public BarcodeRecord(string text)
         {
-            Text = $"* {text} *";
+            Text = text;
         }
 
         public override string ToString() {

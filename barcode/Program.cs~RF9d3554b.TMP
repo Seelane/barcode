@@ -157,14 +157,14 @@ public static class Program
         }
 
         Console.WriteLine("Select the operating mode:\n1 - display text,\n2 - display barcode,\n3 - display full barcode");
-        var selectedMode = Console.ReadLine();
+        string selectedMode = Console.ReadLine();
         switch (selectedMode)
         {
             case "1":
             case "text":
             case "display text":
                 IBarcode.BarcodeType = BarcodeType.Text;
-                Console.WriteLine($"Text only:");
+                Console.WriteLine($"Barcode text:");
                 break;
             case "2":
             case "barcode":
@@ -177,9 +177,10 @@ public static class Program
             case "display full":
             case "full barcode":
             case "display full barcode":
-            default:
                 IBarcode.BarcodeType = BarcodeType.Full;
                 Console.WriteLine("Barcode with text:");
+                break;
+            default:
                 break;
         }
 
@@ -192,4 +193,5 @@ public static class Program
             Console.WriteLine("Error: your text is invalid.");
         }
     }
+
 }
