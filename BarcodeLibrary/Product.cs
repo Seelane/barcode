@@ -19,7 +19,7 @@
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public string Barcode_Lab2 { get => Barcode.ToString(); }
+        public string Barcode_Lab2 => Barcode.ToString();
 
         public Product(int id, string name, string description)
         {
@@ -28,14 +28,9 @@
             Description = description;
             Barcode = new Barcode(_id.ToString());
         }
-        public string Type => "Товар";
-        public string ToStringBased()
-        {
-            return $"Id: {Id} \nName: {Name} \nDescription: {Description}\n";
-        }
         public override string ToString()
         {
-            return $"Type: {Type}\n{this.ToStringBased()}";
+            return $"Type: {GetType().Name} \nId: {Id} \nName: {Name} \nDescription: {Description}\n";
         }
     }
 }

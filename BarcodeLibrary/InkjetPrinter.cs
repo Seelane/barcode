@@ -16,11 +16,7 @@
             Count = count;
             IsColor = isColor;
         }
-
-        public string Type => "Струйный принтер";
-        public string ToStringIP() 
-            => $"{base.ToStringBased()}IsColor: {IsColor} \nPrice: {Price} \nCount: {Count} \nBarcode:\n{Barcode_Lab2}";
         public override string ToString()
-            => $"Type: {Type} \n{this.ToStringIP()}";
+            => $"{base.ToString()}IsColor: {IsColor} \nPrice: {Price} \nCount: {Count} \nBarcode:\n{Barcode_Lab2}";
     }
 }
