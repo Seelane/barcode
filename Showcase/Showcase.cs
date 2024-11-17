@@ -6,8 +6,9 @@ namespace Showcase_L2
     /// <summary>
     /// витрина
     /// </summary>
-    public class Showcase
+    public class Showcase<T> where T : IProduct
     {
+private const string WARN = "Ты кринж";
         private int _id;
         public int Id
         {
@@ -21,24 +22,38 @@ namespace Showcase_L2
                 UpdateProductId();
             }
         }
-
-        private readonly Product[] _container;
+        private readonly T[] _container;
         /// <summary>
         /// скртытый оператор преобразования типов
         /// </summary>
-        public static implicit operator Showcase(int size) => new (size);
+        public static implicit operator Showcase<T>(int size) => new (size);
         private Showcase(int size)
         {
-            _container = new Product[size];
+            _container = new T[size];
         }
 
-        public Product this[int index]
+        /// <summary>
+        /// скртытый оператор преобразования типов с кортежем
+        /// </summary>
+        public static implicit operator Showcase<T>((int size, int id) shk) => new(shk.size) { Id = shk.id };
+        /// <summary>
+        /// конструктор с двумя параметрами
+        /// </summary>
+        /// <param name="size"></param>
+        /// <param name="id"></param>
+        public Showcase(int size, int id)
+        {
+            _container = new T[size];
+            Id = size;
+        }
+
+        public T this[int index]
         {
             get
             {
-                if (index >= _container.Length) return null;
-                Product p = _container[index];
-                _container[index] = null;
+                if (index >= _container.Length) return default;
+                T p = _container[index];
+                _container[index] = default;
                 return p;
             }
             set
@@ -67,7 +82,7 @@ namespace Showcase_L2
             _container[index].Barcode.Text = $"{_container[index].Id} {Id} {index}";
         }
 
-        public void Push(Product product)
+        public void Push(T product)
         {
             for (int i = 0; i < _container.Length; i++)
             {
@@ -79,9 +94,9 @@ namespace Showcase_L2
             }
         }
 
-        public void Push(Product product, int index)
+        public void Push(T product, int index)
         {
-            if (index >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
+            if (index >= _container.Length) { Console.WriteLine(WARN); return; }
             this[index] = product;
         }
 
@@ -91,7 +106,7 @@ namespace Showcase_L2
             {
                 if (_container[i] != null)
                 {
-                    this[i] = null;
+                    this[i] = default;
                     return;
                 }
             }
@@ -99,20 +114,20 @@ namespace Showcase_L2
 
         public void Pop(int index)
         {
-            if (index >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
-            this[index] = null;
+            if (index >= _container.Length) { Console.WriteLine(WARN); return; }
+            this[index] = default;
         }
 
         public void Replace(int indexFrom, int indexTo)
         {
-            if (indexFrom >= _container.Length || indexTo >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
+            if (indexFrom >= _container.Length || indexTo >= _container.Length) { Console.WriteLine(WARN); return; }
             this[indexTo] = this[indexFrom];
         }
 
         public void Rearrage(int index1st, int index2nd)
         {
-            if (index1st >= _container.Length || index2nd >= _container.Length) { Console.WriteLine("Ты кринж"); return; }
-            Product temp = this[index1st];
+            if (index1st >= _container.Length || index2nd >= _container.Length) { Console.WriteLine(WARN); return; }
+            T temp = this[index1st];
             this[index1st] = this[index2nd];
             this[index2nd] = temp;
         }

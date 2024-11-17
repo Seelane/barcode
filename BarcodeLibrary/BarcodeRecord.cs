@@ -2,7 +2,7 @@
 
 namespace BarcodeLibrary
 {
-    public record BarcodeRecord
+    public record BarcodeRecord : IBarcode
     {
         private string _full;
         private string _text;
@@ -26,6 +26,7 @@ namespace BarcodeLibrary
                 UpdateBarcode();
             }
         }
+        
         public string BarcodeString => _barcode;
 
         private void UpdateBarcode()

@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BarcodeLibrary
+{
+    sealed public class InkjetPrinter(int id, string name, string description, bool isColor, double price, int count, string inkType, int numberOfColors) : Printer(id, name, description, isColor, price, count), IProduct
+    {
+        public string InkType { get; set; } = inkType;
+        public int NumberOfColors { get; set; } = numberOfColors;
+        public BarcodeRecord BarcodeRecord { get; } = new BarcodeRecord(id.ToString());
+        public string Barcode_Lab3 => BarcodeRecord.ToString();
+
+        public override string ToString() => $"{ToStringCh1()}InkType: {InkType} \nNumberOfColors: {NumberOfColors}\n{ToStringCh2}\nBarcode: \n{Barcode_Lab3}";
+    }
+}
