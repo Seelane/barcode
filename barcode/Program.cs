@@ -18,7 +18,6 @@ public static class Program
                 case "1":
                     TestLab1();
                     break;
-
                 case "2":
                     TestLab2();
                     break;
@@ -45,6 +44,7 @@ public static class Program
     static void TestLab3()
     {
         Console.Clear();
+     
         var lab3Data = new List<IProduct>
         {
             new Printer(3000, "ВОЙНА И МИР III", "Л.Н. Толстой", true, 1867, 300000),
@@ -60,6 +60,8 @@ public static class Program
 
         Showcase<IProduct> a1 = (7, 1);  // витрина на 7 позиций с 1м идентификатором
         Showcase<InkjetPrinter> a2 = new (3, 10);  // витрина на 3 позиции с 10м идентификатором
+
+        a1.Notify += DisplayMessage;
 
         foreach (var товар in lab3Data)
         {
@@ -81,11 +83,13 @@ public static class Program
         a1.Id = 2; // смена ID витрины
         sample1.Id++; // смена ID товара
         sample2.Id++; // смена ID товара, будет перезаписан штрихкод
-
+        
         // Каждый товар должен правильно отображать штрих код:
         // - ОбычныйТовар на витрине отображает штрихкод с позицией и ID витрины
         // - КонечныйТовар отображает только ID товара, обрамленный *
         Console.WriteLine(a1);
+
+        Console.WriteLine("Cringeee");
 
         a2[0] = (InkjetPrinter)a1[5]; // вам надо поменять этот код, чтобы можно было запустить терминал (менять только здесь)
         Console.WriteLine(a2);
@@ -101,60 +105,60 @@ public static class Program
         Console.WriteLine(sample);
         showcase.Push(sample);
         Console.WriteLine(showcase[0]);
-        //var lab2Data = new List<Product> {
-        //            new Printer(3000, "ВОЙНА И МИРЪ III", "Л.Н. Толстой", false, 1867, 300000),
-        //            new Printer(2000, "ВОЙНА И МИРЪ II", "Л.Н. Толстой", false, 1865, 200000),
-        //            new Printer(4000, "ВОЙНА И МИРЪ IV", "Л.Н. Толстой", true, 1869, 400000)
-        //        };
+        var lab2Data = new List<Product> {
+                    new Printer(3000, "ВОЙНА И МИРЪ III", "Л.Н. Толстой", false, 1867, 300000),
+                    new Printer(2000, "ВОЙНА И МИРЪ II", "Л.Н. Толстой", false, 1865, 200000),
+                    new Printer(4000, "ВОЙНА И МИРЪ IV", "Л.Н. Толстой", true, 1869, 400000)
+                };
 
-        //foreach (var product in lab2Data)
-        //    showcase.Push(product);
-        //showcase.Push(sample); // допускаемый способ закидывания товара на витрину в пустое место
-        //showcase[4] = sample; //прямая отправка товара на нужную позицию витрины
-        //Console.WriteLine("Вывести sample? 1 - да, 2 - нет");
-        //if (Console.ReadLine() == "1")
-        //{
-        //    Console.WriteLine(sample);
-        //}
-        //else { Console.WriteLine("Пропускаем"); }
-        //sample.Id++; // Можно изменять идентификатор, при этом на витрине товар утратит свой уникальный штрих код
-        //Console.WriteLine("А теперь?");
-        //if (Console.ReadLine() == "1")
-        //    Console.WriteLine(sample);
+        foreach (var product in lab2Data)
+            showcase.Push(product);
+        showcase.Push(sample); // допускаемый способ закидывания товара на витрину в пустое место
+        showcase[4] = sample; //прямая отправка товара на нужную позицию витрины
+        Console.WriteLine("Вывести sample? 1 - да, 2 - нет");
+        if (Console.ReadLine() == "1")
+        {
+            Console.WriteLine(sample);
+        }
+        else { Console.WriteLine("Пропускаем"); }
+        sample.Id++; // Можно изменять идентификатор, при этом на витрине товар утратит свой уникальный штрих код
+        Console.WriteLine("А теперь?");
+        if (Console.ReadLine() == "1")
+            Console.WriteLine(sample);
 
-        //showcase.OrderByName(); // Обязательная сортировка, она же может чинить штрихкоды товаров,
-        //Console.WriteLine("Вывести 5 элемент витрины? 1 - да, 2 - нет");
-        //if (Console.ReadLine() == "1")
-        //    Console.WriteLine(showcase[4]);// т.к. фактически происходит изменение позиций товаров на витрине.
-        //showcase.Id++;          // можно менять ID витрины
-        //showcase.OrderById();
-        //Console.WriteLine("Вывести 5 элемент витрины? 1 - да, 2 - нет");
-        //if (Console.ReadLine() == "1")
-        //    Console.WriteLine(showcase[4]);
-        //Console.WriteLine("".PadLeft(40, '='));
-        //Console.WriteLine("Вывести всю витрину? 1 - да, 2 - нет");
-        //if (Console.ReadLine() == "1")
-        //    Console.WriteLine(showcase); // приведение к строке витрины
-        //showcase.Replace(4, 1);
-        //showcase.Push(sample, 1);
+        showcase.OrderByName(); // Обязательная сортировка, она же может чинить штрихкоды товаров,
+        Console.WriteLine("Вывести 5 элемент витрины? 1 - да, 2 - нет");
+        if (Console.ReadLine() == "1")
+            Console.WriteLine(showcase[4]);// т.к. фактически происходит изменение позиций товаров на витрине.
+        showcase.Id++;          // можно менять ID витрины
+        showcase.OrderById();
+        Console.WriteLine("Вывести 5 элемент витрины? 1 - да, 2 - нет");
+        if (Console.ReadLine() == "1")
+            Console.WriteLine(showcase[4]);
+        Console.WriteLine("".PadLeft(40, '='));
+        Console.WriteLine("Вывести всю витрину? 1 - да, 2 - нет");
+        if (Console.ReadLine() == "1")
+            Console.WriteLine(showcase); // приведение к строке витрины
+        showcase.Replace(4, 1);
+        showcase.Push(sample, 1);
 
-        //Console.WriteLine("".PadLeft(20, '='));
-        //Console.WriteLine("Вывести всю витрину? 1 - да, 2 - нет");
-        //if (Console.ReadLine() == "1") Console.WriteLine(showcase);
-        //int searchingResult;
-        //searchingResult = showcase.SearchPositionById(1001);
-        //{
-        //    if (searchingResult != -1)
-        //        Console.WriteLine($"Товар найден");
-        //    else Console.WriteLine("Товар не найден");
-        //}
+        Console.WriteLine("".PadLeft(20, '='));
+        Console.WriteLine("Вывести всю витрину? 1 - да, 2 - нет");
+        if (Console.ReadLine() == "1") Console.WriteLine(showcase);
+        int searchingResult;
+        searchingResult = showcase.SearchPositionById(1112);
+        {
+            if (searchingResult != -1)
+                Console.WriteLine("Товар найден");
+            else Console.WriteLine("Товар не найден");
+        }
 
-        //searchingResult = showcase.SearchPositionByName("ВОЙНА И МИРЪ III");
-        //{
-        //    if (searchingResult != -1)
-        //        Console.WriteLine("Товар найден.");
-        //    else Console.WriteLine("Товар не найден.");
-        //}
+        searchingResult = showcase.SearchPositionByName("ВОЙНА И МИРЪ III");
+        {
+            if (searchingResult != -1)
+                Console.WriteLine("Товар найден.");
+            else Console.WriteLine("Товар не найден.");
+        }
     }
 
     static void TestLab1()
@@ -210,5 +214,11 @@ public static class Program
         {
             Console.WriteLine("Error: your text is invalid.");
         }
+    }
+
+
+    static void DisplayMessage (string message)
+    {
+        Console.WriteLine(message);
     }
 }

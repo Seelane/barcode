@@ -8,7 +8,13 @@ namespace Showcase_L2
     /// </summary>
     public class Showcase<T> where T : IProduct
     {
-private const string WARN = "Ты кринж";
+
+        public delegate void ShowcaseDelegate(string message);
+        public event ShowcaseDelegate Notify;
+
+
+
+        private const string WARN = "Ты кринж";
         private int _id;
         public int Id
         {
@@ -18,6 +24,7 @@ private const string WARN = "Ты кринж";
                 if (_id != value)
                 {
                     _id = value;
+                    Notify?.Invoke("Showcase's id was changed");
                 }
                 UpdateProductId();
             }
@@ -26,7 +33,7 @@ private const string WARN = "Ты кринж";
         /// <summary>
         /// скртытый оператор преобразования типов
         /// </summary>
-        public static implicit operator Showcase<T>(int size) => new (size);
+        public static implicit operator Showcase<T>(int size) => new(size);
         private Showcase(int size)
         {
             _container = new T[size];
@@ -64,6 +71,9 @@ private const string WARN = "Ты кринж";
             }
         }
 
+        /// <summary>
+        /// обновляет все продукты
+        /// </summary>
         public void UpdateProductId()
         {
             for (int i = 0; i < _container.Length; i++)
@@ -72,6 +82,10 @@ private const string WARN = "Ты кринж";
                     UpdateProductId(i);
             }
         }
+        /// <summary>
+        /// обновляет продукт на позиции index
+        /// </summary>
+        /// <param name="index"></param>
         public void UpdateProductId(int index)
         {
             if (_container[index] == null || index < 0 || index > _container.Length)
@@ -132,62 +146,46 @@ private const string WARN = "Ты кринж";
             this[index2nd] = temp;
         }
 
-        public int SearchPositionById(int id)
-        {
 
+        private int SearchFunction(Func<T, bool> func)
+        {
             for (int i = 0; i < _container.Length; i++)
             {
-                if (_container[i] != null && _container[i].Id == id)
-                {
-                    return i;
-                }
+             if (_container[i] != null && func(_container[i]))
+                { return i; }
             }
             return -1;
+        }
+        public int SearchPositionById(int id)
+        {
+            return SearchFunction((p1) => p1.Id == id);
         }
 
         public int SearchPositionByName(string name)
         {
-            for (int i = 0; i < _container.Length; i++)
-            {
-                if (_container[i] != null && _container[i].Name == name)
-                {
-                    return i;
-                }
-            }
-            return -1;
+            return SearchFunction((p1) => p1.Name == name);
         }
 
-        /// <summary>
-        /// сортировка по имени
-        /// </summary>
-        public void OrderByName()
+/// <summary>
+/// сортировка делегатом
+/// </summary>
+        private void OrderFunction(Func<T, T, int> func)
         {
             Array.Sort(_container, (p1, p2) =>
             {
                 if (p1 == null) return 1;
                 if (p2 == null) return -1;
-                return p1.Name.CompareTo(p2.Name);
+                return func(p1, p2);
             });
             UpdateProductId();
         }
-        /// <summary>
-        /// сортировка по id
-        /// </summary>
-        public void OrderById()
-        {
-            Array.Sort(_container, (p1, p2) =>
-            {
-                if (p1 == null) return 1;
-                if (p2 == null) return -1;
-                return p1.Id.CompareTo(p2.Id);
-            });
-            UpdateProductId();
-        }
+        public void OrderByName() => OrderFunction((p1, p2) => p1.Name.CompareTo(p2.Name));
+        public void OrderById() => OrderFunction((p1, p2) => p1.Id.CompareTo(p2.Id));
 
         public override string ToString()
         {
             int i = 0;
-            StringBuilder result = new ("");
+            StringBuilder result = new("");
             foreach (var item in _container)
             {
                 if (item != null)
