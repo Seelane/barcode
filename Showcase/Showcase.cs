@@ -6,11 +6,11 @@ namespace Showcase_L2
     /// <summary>
     /// витрина
     /// </summary>
-    public class Showcase<T> where T : IProduct
+    public class Showcase<T> : IShowcase<T> where T : class, IProduct
     {
 
-        public delegate void ShowcaseDelegate(string message);
-        public event ShowcaseDelegate Notify;
+        public delegate void ShowcaseDelegate(IShowcase<T> showcase);
+        private ShowcaseDelegate idChanged;
 
 
 
@@ -24,7 +24,7 @@ namespace Showcase_L2
                 if (_id != value)
                 {
                     _id = value;
-                    Notify?.Invoke("Showcase's id was changed");
+                    idChanged?.Invoke(this);
                 }
                 UpdateProductId();
             }
@@ -60,7 +60,7 @@ namespace Showcase_L2
             {
                 if (index >= _container.Length) return default;
                 T p = _container[index];
-                _container[index] = default;
+                _container[index] = null;
                 return p;
             }
             set
@@ -151,7 +151,7 @@ namespace Showcase_L2
         {
             for (int i = 0; i < _container.Length; i++)
             {
-             if (_container[i] != null && func(_container[i]))
+                if (_container[i] != null && func(_container[i]))
                 { return i; }
             }
             return -1;
@@ -166,9 +166,9 @@ namespace Showcase_L2
             return SearchFunction((p1) => p1.Name == name);
         }
 
-/// <summary>
-/// сортировка делегатом
-/// </summary>
+        /// <summary>
+        /// сортировка делегатом
+        /// </summary>
         private void OrderFunction(Func<T, T, int> func)
         {
             Array.Sort(_container, (p1, p2) =>

@@ -8,9 +8,9 @@ namespace BarcodeLibrary
 {
     public interface IBarcode
     {
-        public string Text { get; set; }
-        public string BarcodeString { get; }
-        public string Full {  get; }
+        string Text { get; set; }
+        string BarcodeString { get; }
+        string Full {  get; }
         public static BarcodeType BarcodeType { get; set; } = BarcodeType.Full;
     }
 }

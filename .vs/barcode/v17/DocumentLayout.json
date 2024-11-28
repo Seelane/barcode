@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\ostap\\source\\repos\\barcode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7E05543-9D2F-4ADE-A1C8-E18D1D247514}|Showcase\\Showcase.csproj|c:\\users\\ostap\\source\\repos\\barcode\\showcase\\showcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7E05543-9D2F-4ADE-A1C8-E18D1D247514}|Showcase\\Showcase.csproj|solutionrelative:showcase\\showcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\lab4part2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\lab4part2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7E05543-9D2F-4ADE-A1C8-E18D1D247514}|Showcase\\Showcase.csproj|c:\\users\\ostap\\source\\repos\\barcode\\showcase\\ishowcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7E05543-9D2F-4ADE-A1C8-E18D1D247514}|Showcase\\Showcase.csproj|solutionrelative:showcase\\ishowcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A08D6C2E-FD4F-4D8F-81A0-24C3F638FD1E}|barcode\\barcode.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A08D6C2E-FD4F-4D8F-81A0-24C3F638FD1E}|barcode\\barcode.csproj|solutionrelative:barcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7E05543-9D2F-4ADE-A1C8-E18D1D247514}|Showcase\\Showcase.csproj|c:\\users\\ostap\\source\\repos\\barcode\\showcase\\showcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7E05543-9D2F-4ADE-A1C8-E18D1D247514}|Showcase\\Showcase.csproj|solutionrelative:showcase\\showcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\inkjetprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\inkjetprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\barcoderecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\barcoderecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\barcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\barcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\ibarcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\ibarcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|c:\\users\\ostap\\source\\repos\\barcode\\barcodelibrary\\myexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF94B2D2-3127-4FCF-B16C-6BBD3AD825FC}|BarcodeLibrary\\BarcodeLibrary.csproj|solutionrelative:barcodelibrary\\myexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +46,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Showcase.cs",
               "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\Showcase\\Showcase.cs",
               "RelativeDocumentMoniker": "Showcase\\Showcase.cs",
               "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\Showcase\\Showcase.cs",
               "RelativeToolTip": "Showcase\\Showcase.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAWwBoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T12:13:36.404Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -56,16 +67,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Lab4Part2.cs",
-              "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\Lab4Part2.cs",
-              "RelativeDocumentMoniker": "BarcodeLibrary\\Lab4Part2.cs",
-              "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\Lab4Part2.cs",
-              "RelativeToolTip": "BarcodeLibrary\\Lab4Part2.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "IShowcase.cs",
+              "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\Showcase\\IShowcase.cs",
+              "RelativeDocumentMoniker": "Showcase\\IShowcase.cs",
+              "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\Showcase\\IShowcase.cs",
+              "RelativeToolTip": "Showcase\\IShowcase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T07:48:49.535Z",
+              "WhenOpened": "2024-11-28T15:47:58.182Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IBarcode.cs",
+              "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\IBarcode.cs",
+              "RelativeDocumentMoniker": "BarcodeLibrary\\IBarcode.cs",
+              "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\IBarcode.cs",
+              "RelativeToolTip": "BarcodeLibrary\\IBarcode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T15:44:46.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Barcode.cs",
+              "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\Barcode.cs",
+              "RelativeDocumentMoniker": "BarcodeLibrary\\Barcode.cs",
+              "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\Barcode.cs",
+              "RelativeToolTip": "BarcodeLibrary\\Barcode.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T07:38:41.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BarcodeRecord.cs",
+              "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\BarcodeRecord.cs",
+              "RelativeDocumentMoniker": "BarcodeLibrary\\BarcodeRecord.cs",
+              "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\BarcodeRecord.cs",
+              "RelativeToolTip": "BarcodeLibrary\\BarcodeRecord.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T07:11:14.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MyExceptions.cs",
+              "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\MyExceptions.cs",
+              "RelativeDocumentMoniker": "BarcodeLibrary\\MyExceptions.cs",
+              "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\MyExceptions.cs",
+              "RelativeToolTip": "BarcodeLibrary\\MyExceptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T07:48:49.535Z"
             },
             {
               "$type": "Document",
@@ -75,10 +134,9 @@
               "RelativeDocumentMoniker": "BarcodeLibrary\\InkjetPrinter.cs",
               "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\InkjetPrinter.cs",
               "RelativeToolTip": "BarcodeLibrary\\InkjetPrinter.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:59:57.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T11:59:57.696Z"
             },
             {
               "$type": "Document",
@@ -88,36 +146,21 @@
               "RelativeDocumentMoniker": "BarcodeLibrary\\IProduct.cs",
               "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\IProduct.cs",
               "RelativeToolTip": "BarcodeLibrary\\IProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T16:44:32.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T16:44:32.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\Product.cs",
-              "RelativeDocumentMoniker": "BarcodeLibrary\\Product.cs",
-              "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\BarcodeLibrary\\Product.cs",
-              "RelativeToolTip": "BarcodeLibrary\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T11:34:44.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ostap\\source\\repos\\barcode\\barcode\\Program.cs",
               "RelativeDocumentMoniker": "barcode\\Program.cs",
               "ToolTip": "C:\\Users\\ostap\\source\\repos\\barcode\\barcode\\Program.cs",
               "RelativeToolTip": "barcode\\Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAIA2wD8AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAvwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T20:51:06.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T20:51:06.264Z"
             }
           ]
         }

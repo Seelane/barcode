@@ -58,10 +58,8 @@ public static class Program
             new (6666, "Понимание комикса", "А. Шпигельман", true, 1990, 860, "base", 1488)
         };
 
-        Showcase<IProduct> a1 = (7, 1);  // витрина на 7 позиций с 1м идентификатором
-        Showcase<InkjetPrinter> a2 = new (3, 10);  // витрина на 3 позиции с 10м идентификатором
-
-        a1.Notify += DisplayMessage;
+        IShowcase<IProduct> a1 = (Showcase<IProduct>)(7, 1);  // витрина на 7 позиций с 1м идентификатором
+        IShowcase<InkjetPrinter> a2 = (Showcase<InkjetPrinter>)(3, 10);  // витрина на 3 позиции с 10м идентификатором
 
         foreach (var товар in lab3Data)
         {
@@ -93,6 +91,8 @@ public static class Program
 
         a2[0] = (InkjetPrinter)a1[5]; // вам надо поменять этот код, чтобы можно было запустить терминал (менять только здесь)
         Console.WriteLine(a2);
+        sample1.Id = 123;
+        Console.WriteLine(sample1);
     }
 
     static void TestLab2()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BarcodeLibrary
 {
-    public class Lab4Part2 : EventArgs
+    public class MyExceptions : EventArgs
     {
 
     }

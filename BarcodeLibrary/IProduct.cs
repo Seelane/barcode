@@ -1,6 +1,8 @@
 ﻿namespace BarcodeLibrary
 {
-    // Интерфейс, описывающий товар
+    /// <summary>
+    /// Интерфейс, описывающий товар
+    /// </summary>
     public interface IProduct
     {
         int Id { get; set; }
