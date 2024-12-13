@@ -7,7 +7,7 @@ namespace Showcase_L2
         T this[int index] { get; set; }
 
         int Id { get; set; }
-
+        int Length { get; }
         void OrderById();
         void OrderByName();
         void Pop();

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace BarcodeLibrary
 {
-    public class MyExceptions : EventArgs
+    public class IdChangedEventArgs : EventArgs
     {
-
-    }
-
-    static class Extention
-    {
-        public static void NameOfFunction(this Product product)
+        public int PreviosId { get; }
+        public int CurrentId { get; }
+        public IdChangedEventArgs(int previosId, int currentId)
         {
-
+            PreviosId = previosId;
+            CurrentId = currentId;
         }
     }
+
+
 
 }
 

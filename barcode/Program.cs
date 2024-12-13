@@ -1,4 +1,5 @@
 ﻿using System;
+using barcode;
 using Showcase_L2;
 using BarcodeLibrary;
 using System.Security.Cryptography.X509Certificates;
@@ -25,7 +26,10 @@ public static class Program
                     TestLab3();
                     break;
                 case "4":
-                    Console.WriteLine("В разработке...");
+                    TestLab4();
+                    break;
+                case "5":
+                    BarcodeUI.UserInterface();
                     break;
                 default:
                     Console.WriteLine("Try again.");
@@ -39,6 +43,40 @@ public static class Program
                 break;
             else Console.WriteLine("Начнём с начала");
         }
+    }
+    static void TestLab4()
+    {
+        Console.Clear();
+        var lab4Data = new List<IProduct>
+    {
+        new Printer(3000, "ВОЙНА И МИР III", "Л.Н. Толстой",true, 1867, 300000),
+        new Printer(1000, "ВОЙНА И МИР I", "Л.Н. Толстой", false, 1863, 1000000),
+        new Printer(2000, "ВОЙНА И МИР II", "Л.Н. Толстой", false, 1865, 200000),
+        new Printer(5555, "Хранители", "С. Маккоуд", true, 2008, 2071),
+        new InkjetPrinter(6666, "Понимание комикса", "А. Шпигельман", true, 1990, 860, "base", 255)
+    };
+
+        Showcase<IProduct> a = (7, 1); // витрина на 7 позиций с 1м идентификатором
+        foreach (var товар in lab4Data)
+        {
+            a.Push(товар);
+        }
+        a.OrderByName();
+
+        var sample1 = new InkjetPrinter(7777, "Ходячие мертвецы", "Р. Кирман", false, 2003, 2257, "base", 255);
+        var sample2 = new Printer(4000, "ВОЙНА И МИР IV", "Л.Н. Толстой", true, 1869, 400000);
+        a[5] = sample1;
+        a[6] = sample2;
+
+        // смена ID
+        a.Id = 2;
+        sample1.Id++;
+        sample2.Id++;
+
+        // Каждый товар должен правильно отображать штрих код:
+        // — ОбычныйТовар на витрине отображает штрихкод с позицией и ID витрины
+        // — КонечныйТовар, отображает только ID товара, обрамленный *
+        Console.WriteLine(a);
     }
 
     static void TestLab3()

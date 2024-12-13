@@ -1,4 +1,5 @@
 ﻿using BarcodeLibrary;
+using Showcase;
 using System;
 using System.Text;
 namespace Showcase_L2
@@ -8,12 +9,9 @@ namespace Showcase_L2
     /// </summary>
     public class Showcase<T> : IShowcase<T> where T : class, IProduct
     {
+        private Action<IShowcase<T>> idChanged;
 
-        public delegate void ShowcaseDelegate(IShowcase<T> showcase);
-        private ShowcaseDelegate idChanged;
-
-
-
+        public int Length { get; }
         private const string WARN = "Ты кринж";
         private int _id;
         public int Id
@@ -26,7 +24,6 @@ namespace Showcase_L2
                     _id = value;
                     idChanged?.Invoke(this);
                 }
-                UpdateProductId();
             }
         }
         private readonly T[] _container;
@@ -37,6 +34,7 @@ namespace Showcase_L2
         private Showcase(int size)
         {
             _container = new T[size];
+            Length = size;
         }
 
         /// <summary>
@@ -52,6 +50,7 @@ namespace Showcase_L2
         {
             _container = new T[size];
             Id = size;
+            Length = size;
         }
 
         public T this[int index]
@@ -60,6 +59,11 @@ namespace Showcase_L2
             {
                 if (index >= _container.Length) return default;
                 T p = _container[index];
+                if (p != null)
+                {
+                    idChanged -= p.UpdateBarcode;
+                    p.IdChanged -= OnIdChanged;
+                }
                 _container[index] = null;
                 return p;
             }
@@ -68,6 +72,18 @@ namespace Showcase_L2
                 if (index >= _container.Length) return;
                 _container[index] = value;
                 UpdateProductId(index);
+                if (value == null) return;
+                idChanged += value.UpdateBarcode;
+                value.IdChanged += OnIdChanged;
+            }
+        }
+
+        private void OnIdChanged(object sender, IdChangedEventArgs e)
+        {
+            if (sender is T product)
+            {
+                Console.WriteLine($"Идентификатор товара был изменен с {e.PreviosId} на {e.CurrentId}");
+                product.UpdateBarcode(this);
             }
         }
 
@@ -147,14 +163,9 @@ namespace Showcase_L2
         }
 
 
-        private int SearchFunction(Func<T, bool> func)
+        private int SearchFunction(Predicate<T> func)
         {
-            for (int i = 0; i < _container.Length; i++)
-            {
-                if (_container[i] != null && func(_container[i]))
-                { return i; }
-            }
-            return -1;
+            return _container.Where(x => x != null).ToList().FindIndex(func);
         }
         public int SearchPositionById(int id)
         {
